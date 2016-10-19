@@ -1,0 +1,216 @@
+﻿<!DOCTYPE html>
+<html ng-app="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta http-equiv="Expires" content="-1">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <!-- UC默认竖屏 ，UC强制全屏 -->
+    <meta name="full-screen" content="yes">
+    <meta name="browsermode" content="application">
+    <!-- QQ强制竖屏 QQ强制全屏 -->
+    <meta name="x5-orientation" content="portrait">
+    <meta name="x5-fullscreen" content="true">
+    <meta name="x5-page-mode" content="app">
+    <title>银联支付</title>
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link rel="Shortcut Icon" href="//r.uzaicdn.com/favicon-sj.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="unionpay.css" />
+</head>
+<body ng-controller="">
+    <!--提交订单信息-->
+<div class="unionpay-all unions">
+    <div class="unionpay border-bot">
+        <a onclick="">
+            <i class="iconfont icon-back"></i>
+        </a>
+        <b>信息填写</b>
+    </div>
+
+    <div class="unionpay-explain">
+        <h4>温馨提示：</h4>
+        <p>
+        （1）我们将根据您提供的手机号和邮箱地址，通知您领取礼品卡。请务必填写正确有效的信息。
+        </p>
+        <p>
+        （2）您填写的邮箱地址将作为查询帐号，成功提交后，系统将自动发送首次查询密码至该邮箱，请注意查收。
+        </p>
+        <p>
+        （3）如您填写的手机号不是众信旅游悠哉网会员，提交后我们将为您注册众信旅游悠哉网帐号。
+        </p>
+    </div>
+
+    <div class="union-form border-top border-bot">
+        <div>
+            <dl>
+                <dt>
+                    <span>姓</span>
+                    <b></b>
+                </dt>
+                <dd class="border-bot">
+                    <input type="text" placeholder="请输入拼音" class="firstName" onkeyup="this.value = this.value.toUpperCase()">
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>名</span>
+                    <b></b>
+                </dt>
+                <dd class="border-bot">
+                    <input type="text" placeholder="请输入拼音" class="lastName" onkeyup="this.value = this.value.toUpperCase()">
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>手机号码</span>
+                    <b></b>
+                </dt>
+                <dd class="border-bot">
+                    <span class="chooseE"><input type="text" class="quhao" value="86"><b class="border"></b></span>
+                    <input type="number" placeholder="请输入手机号" class="phone">
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>邮箱地址</span>
+                    <b></b>
+                </dt>
+                <dd class="border-bot">
+                    <input type="text" placeholder="请输入邮箱地址" class="email">
+                </dd>
+            </dl>
+            <dl>
+                <dt>
+                    <span>推荐码</span>
+                </dt>
+                <dd class="">
+                    <input type="number" placeholder="非必填（仅数字）" class="ecommendationCode">
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="union-argee">
+        <span class="choose">
+            <b class="iconfont icon-right-9"></b>
+            <i>本人同意：</i>
+        </span>
+        <span class="title">
+            向银联国际和众信旅游悠哉网提供我的手机号、邮箱地址等信息以便参与信用奖励活动。通过以上联络方式接收有关银联产品的优惠和服务信息，包括根据我的消费记录而定制的优惠、信息。
+        </span>
+    </div>
+
+    <div class="union-sure">
+        <a href="javascript:void(0)">
+            <b>提交</b>
+        </a>
+    </div>
+</div>
+
+<!--银行卡-->
+<div class="bank-card zHide unions">
+    <div class="unionpay border-bot">
+        <a onclick="">
+            <i class="iconfont icon-back"></i>
+        </a>
+        <b>信息填写</b>
+    </div>
+
+    <div class="unionpay-explain">
+        <h4>温馨提示：</h4>
+        <p>
+        （1）我们将根据您提供的手机号和邮箱地址，通知您领取礼品卡。请务必填写正确有效的信息。
+
+        </p>
+        <p>
+        （2）您填写的邮箱地址将作为查询帐号，成功提交后，系统将自动发送首次查询密码至该邮箱，请注意查收。
+        </p>
+    </div>
+
+    <div class="union-form border-top border-bot">
+        <div>
+            <dl>
+                <dt>
+                    <span>银行卡号</span>
+                    <b></b>
+                </dt>
+                <dd class="">
+                    <input type="number" placeholder="请输入62开头的银联卡号">
+                </dd>
+            </dl>
+        </div>
+    </div>
+
+    <div class="union-argee">
+        <span class="choose">
+            <b></b>
+            <i>本人同意：</i>
+        </span>
+        <span class="title">
+            向银联国际和众信旅游悠哉网提供我的手机号、邮箱地址等信息以便参与信用奖励活动。通过以上联络方式接收有关银联产品的优惠和服务信息，包括根据我的消费记录而定制的优惠、信息。
+        </span>
+    </div>
+
+    <div class="union-sure">
+        <b>提交</b>
+    </div>
+</div>
+
+
+<!--失败-->
+<div class="union-fail zHide unions">
+    <div class="unionpay border-bot">
+        <a onclick="">
+            <!--<i class="iconfont icon-back"></i>-->
+        </a>
+        <b>提交结果</b>
+    </div>
+    <div class="union-bg">
+        <div class="bg"></div>
+        <p>信息录入失败，参数内容错误</p>
+    </div>
+    <div class="union-sure">
+        <b>确定</b>
+    </div>
+</div>
+
+<!--成功-->
+<div class="union-success zHide unions">
+    <div class="unionpay border-bot">
+        <a onclick="">
+            <!--<i class="iconfont icon-back"></i>-->
+        </a>
+        <b>提交结果</b>
+    </div>
+    <div class="union-bg">
+        <div class="bg"></div>
+        <h4>恭喜您，提交成功！</h4>
+        <p>符合活动奖励条件的众信客户将在活动结束后30个工昨日内收到我们发送的购物卡，感谢您的支持</p>
+    </div>
+    <div class="union-sure">
+        <b>确定</b>
+    </div>
+</div>
+
+
+
+
+
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/libs/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/hybrid/scripts/common/font.js"></script>
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/hybrid/scripts/common/api.js"></script>
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/hybrid/scripts/common/app-bridge.js"></script>
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/libs/frame/angular/angular.min.js"></script>
+    <script type="text/javascript" src="http://www.google-analytics.com/analytics.js"></script>
+    <script type="text/javascript" src="http://r03.uzaicdn.com/content/hybrid/scripts/common/pagestatistics.js"></script>
+    <script src="unionpay.js"></script>
+</body>
+
+</html>
